@@ -244,3 +244,30 @@ footer .social-links a:hover {
     flex-direction: column;
   }
 }
+
+
+#lokasi {
+  text-align: center;
+  margin: 60px auto;
+}
+
+#lokasi h2 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+#lokasi p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
