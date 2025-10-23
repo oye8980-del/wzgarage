@@ -2,17 +2,17 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WZ Garage - Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WZ Garage - Showroom Motor Modern</title>
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-
-<!-- FontAwesome -->
-<script src="https://kit.fontawesome.com/a2d9d5a54b.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
 <!-- CSS -->
 <link rel="stylesheet" href="style.css">
+
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/a2d9d5a54b.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -28,44 +28,81 @@
   </div>
 </header>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <section id="hero">
+  <div class="hero-overlay"></div>
   <div class="hero-content container">
     <h2 class="hero-title">Motor Impianmu, Kini Lebih Dekat</h2>
-    <p class="hero-subtitle">Jual beli motor berkualitas tinggi, terpercaya sejak 2010. Transparan dan profesional.</p>
-    <a href="item.html" class="btn btn-primary cta-btn">Lihat Koleksi Motor</a>
+    <p class="hero-subtitle">Jual beli motor berkualitas tinggi, transparan, dan terpercaya sejak 2010.</p>
+    <a href="item.html" class="btn btn-primary hero-btn">Lihat Koleksi Motor</a>
   </div>
-  <div class="hero-pattern"></div>
 </section>
 
 <!-- Tentang Singkat -->
-<section id="about" class="container section">
+<section id="about" class="section container">
   <h2 class="section-title">Tentang WZ Garage</h2>
-  <p>WZ Garage hadir sebagai showroom digital untuk motor baru dan bekas berkualitas. Kami pastikan pengalaman membeli motor nyaman dan aman.</p>
+  <p class="section-desc">
+    WZ Garage adalah showroom digital premium yang fokus pada jual beli motor baru dan bekas dengan kualitas terbaik. Setiap kendaraan memiliki cerita, dan kami pastikan cerita itu dimulai dengan kepuasan pelanggan.
+  </p>
   <div class="about-grid">
     <div class="about-card">
       <i class="fas fa-check-circle"></i>
       <h3>Unit Terjamin</h3>
-      <p>Motor sudah melalui pengecekan ketat sebelum dijual.</p>
+      <p>Semua motor kami telah melalui pengecekan ketat sebelum dijual.</p>
     </div>
     <div class="about-card">
       <i class="fas fa-bolt"></i>
       <h3>Proses Cepat</h3>
-      <p>Transaksi bisa selesai dalam hitungan jam dengan sistem online.</p>
+      <p>Transaksi selesai dalam hitungan jam dengan sistem online kami.</p>
     </div>
     <div class="about-card">
       <i class="fas fa-handshake"></i>
       <h3>Pelayanan Bersahabat</h3>
-      <p>Tim kami siap membantu dari konsultasi hingga antar motor.</p>
+      <p>Tim kami membantu dari konsultasi hingga pengantaran motor ke rumah.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimoni -->
+<section id="testimoni" class="section">
+  <div class="container">
+    <h2 class="section-title">Kata Mereka Tentang WZ Garage</h2>
+    <div class="testimoni-grid">
+      <div class="testimoni-card">
+        <p>“Beli motor di WZ Garage bener-bener puas! Kondisi motor sesuai deskripsi, dan adminnya super ramah.”</p>
+        <h4>— Dimas, Bekasi</h4>
+      </div>
+      <div class="testimoni-card">
+        <p>“Saya jual motor di sini, prosesnya cepat dan harganya masuk akal. Transparan banget!”</p>
+        <h4>— Rani, Bandung</h4>
+      </div>
+      <div class="testimoni-card">
+        <p>“Motor datang ke rumah tepat waktu, kondisi mulus, udah kayak beli baru!”</p>
+        <h4>— Andre, Tangerang</h4>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section id="cta" class="container section">
-  <h2>Siap Dapetin Motor Impianmu?</h2>
-  <p>Klik tombol di bawah dan mulai perjalananmu bersama <strong>WZ Garage</strong> hari ini.</p>
-  <a href="item.html" class="btn btn-primary cta-btn">Lihat Motor Sekarang</a>
+<section id="cta" class="section cta-section">
+  <div class="container cta-container">
+    <h2 class="cta-title">Siap Dapetin Motor Impianmu?</h2>
+    <p class="cta-desc">Klik tombol di bawah dan mulai perjalananmu bersama <strong>WZ Garage</strong> hari ini.</p>
+    <a href="item.html" class="btn btn-primary cta-btn">Lihat Motor Sekarang</a>
+  </div>
+</section>
+
+<!-- Lokasi -->
+<section id="lokasi" class="section">
+  <div class="container">
+    <h2 class="section-title">Alamat & Lokasi Kami</h2>
+    <p class="section-desc">📍 Perum Puri 3 Blok Bp 06, Karadenan, Cibinong</p>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3964.0509427527563!2d106.80798357499286!3d-6.515236593477198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMzAnNTQuOSJTIDEwNsKwNDgnMzguMCJF!5e0!3m2!1sid!2sid!4v1761202304713!5m2!1sid!2sid"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
 </section>
 
 <!-- Footer -->
@@ -80,7 +117,6 @@
   </div>
 </footer>
 
-<!-- JS -->
 <script src="script.js"></script>
 </body>
 </html>
