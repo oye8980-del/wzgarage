@@ -1,3 +1,4 @@
+// Filter motor berdasarkan jenis, harga, dan nama
 function filterMotor() {
     const jenisFilter = document.getElementById('jenis').value.toLowerCase();
     const hargaFilter = document.getElementById('harga').value;
@@ -16,14 +17,14 @@ function filterMotor() {
         const searchMatch = (motorNama.includes(searchTerm));
 
         if (jenisMatch && hargaMatch && searchMatch) {
-            card.style.display = 'flex';
+            card.style.display = 'flex'; // tampilkan
             visibleCount++;
         } else {
-            card.style.display = 'none';
+            card.style.display = 'none'; // sembunyikan
         }
     });
 
-    // Jika tidak ada motor yang cocok, tampilkan pesan
+    // Pesan jika tidak ada motor yang cocok
     const motorGrid = document.querySelector('.motor-grid');
     let pesan = document.querySelector('#no-result');
     if (visibleCount === 0) {
@@ -34,7 +35,7 @@ function filterMotor() {
             pesan.style.textAlign = 'center';
             pesan.style.fontSize = '1.2rem';
             pesan.style.color = '#cc0000';
-            pesan.style.gridColumn = '1 / -1';
+            pesan.style.gridColumn = '1 / -1'; // agar menempati satu baris penuh
             motorGrid.appendChild(pesan);
         }
     } else {
@@ -42,6 +43,7 @@ function filterMotor() {
     }
 }
 
+// Reset filter ke default
 function resetFilter() {
     document.getElementById('jenis').value = 'semua';
     document.getElementById('harga').value = '';
@@ -50,8 +52,8 @@ function resetFilter() {
     filterMotor();
 }
 
-// Optional: Terapkan filter saat mengetik di kolom search
+// Terapkan filter saat mengetik di kolom search
 document.getElementById('search').addEventListener('input', filterMotor);
 
-// Terapkan filter sekali saat halaman dimuat supaya menampilkan semua motor
+// Tampilkan semua motor saat halaman dimuat
 window.addEventListener('DOMContentLoaded', filterMotor);
