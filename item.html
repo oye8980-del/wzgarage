@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MH53CKX7');</script>
-  <!-- End Google Tag Manager -->
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Item - WZ Garage</title>
+  
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+  
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/a2d9d5a54b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH53CKX7"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <header>
-    <div class="container">
-      <h1>WZ Garage</h1>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-flex">
+      <h1 class="logo">WZ <span>Garage</span></h1>
       <nav>
         <a href="index.html">Home</a>
         <a href="tentang.html">Tentang</a>
@@ -33,37 +28,40 @@
     </div>
   </header>
 
-  <section id="filter" class="container">
-    <h2>Filter Motor</h2>
+  <!-- Filter Section -->
+  <section id="filter" class="container section">
+    <h2 class="section-title">Filter Motor</h2>
+    <div class="filter-grid">
+      <div class="filter-group">
+        <label for="jenis">Jenis Motor:</label>
+        <select id="jenis">
+          <option value="semua">Semua</option>
+          <option value="sport">Sport</option>
+          <option value="matic">Matic</option>
+          <option value="cruiser">Cruiser</option>
+        </select>
+      </div>
 
-    <div class="filter-group">
-      <label for="jenis">Jenis Motor:</label>
-      <select id="jenis">
-        <option value="semua">Semua</option>
-        <option value="sport">Sport</option>
-        <option value="matic">Matic</option>
-        <option value="cruiser">Cruiser</option>
-      </select>
-    </div>
+      <div class="filter-group">
+        <label for="harga">Harga Maksimum (Rp):</label>
+        <input type="number" id="harga" placeholder="Masukkan harga maksimum" />
+      </div>
 
-    <div class="filter-group">
-      <label for="harga">Harga Maksimum (Rp):</label>
-      <input type="number" id="harga" placeholder="Masukkan harga maksimum" />
-    </div>
-
-    <div class="filter-group">
-      <label for="search">Cari Motor:</label>
-      <input type="text" id="search" placeholder="Ketik nama motor..." />
+      <div class="filter-group">
+        <label for="search">Cari Motor:</label>
+        <input type="text" id="search" placeholder="Ketik nama motor..." />
+      </div>
     </div>
 
     <div class="buttons">
       <button onclick="filterMotor()" class="btn btn-primary">Terapkan Filter</button>
-      <button onclick="resetFilter()" class="btn btn-secondary btn-riset">Reset Filter</button>
+      <button onclick="resetFilter()" class="btn btn-secondary">Reset Filter</button>
     </div>
   </section>
 
-  <section id="motor-list" class="container">
-    <h2>Motor Tersedia</h2>
+  <!-- Motor List Section -->
+  <section id="motor-list" class="container section">
+    <h2 class="section-title">Motor Tersedia</h2>
     <div class="motor-grid">
       <div class="motor-card" data-jenis="sport" data-harga="50000000" data-nama="Yamaha R15">
         <img src="r15.png" alt="Yamaha R15" />
@@ -94,14 +92,18 @@
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 WZ Garage. Semua Hak Cipta Dilindungi.</p>
-    <p>Ikuti kami di 
-      <a href="https://www.instagram.com/wzgarageee" target="_blank">Instagram</a> |
-      <a href="https://www.tiktok.com/@wzgarageee" target="_blank">TikTok</a>
-    </p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <p>&copy; 2025 WZ Garage. Semua Hak Cipta Dilindungi.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/wzgarageee" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@wzgarageee" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
   </footer>
 
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
