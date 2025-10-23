@@ -1,263 +1,218 @@
-/* =========================
-   Reset & Font
-========================= */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* Reset & Font */
 body {
+  margin:0;
+  padding:0;
   font-family: 'Poppins', sans-serif;
-  background-color: #fffaf0;
-  color: #333;
-  line-height: 1.7;
+  line-height:1.6;
+  background: #fffbea;
+  color:#333;
 }
 
-/* =========================
-   Container
-========================= */
+/* Container */
 .container {
-  width: 90%;
-  max-width: 1300px;
-  margin: 0 auto;
+  width:90%;
+  max-width:1200px;
+  margin:0 auto;
 }
 
-/* =========================
-   Header
-========================= */
+/* Header */
 .header {
-  background: linear-gradient(90deg, #FFD700, #e6c200);
-  padding: 20px 0;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  background: linear-gradient(90deg, #FFD700, #FFC107);
+  padding:15px 0;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
-
 .header-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
-
 .header .logo {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 2.4rem;
-  color: #000;
+  font-family:'Playfair Display', serif;
+  font-size:2rem;
+  color:#333;
 }
-
-.header .logo span {
-  color: #fff;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-}
-
 .header nav a {
-  margin-left: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  color: #000;
-  font-size: 1.05rem;
-  transition: 0.3s;
+  margin-left:20px;
+  text-decoration:none;
+  font-weight:600;
+  color:#333;
+  transition:0.3s;
+}
+.header nav a.active, .header nav a:hover {
+  color:#000;
+  border-bottom:2px solid #000;
 }
 
-.header nav a:hover,
-.header nav a.active {
-  color: #fff;
-  border-bottom: 2px solid #fff;
-}
-
-/* =========================
-   Hero Section
-========================= */
+/* Hero */
 #hero {
+  position:relative;
   background: url('hero-bg.jpg') center/cover no-repeat;
-  padding: 120px 0 80px;
-  text-align: center;
-  position: relative;
+  height:90vh;
+  display:flex;
+  align-items:center;
 }
-
-#hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.3);
+.hero-overlay {
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.4);
 }
-
 .hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-  margin: 0 auto;
-  color: #fff;
+  position:relative;
+  text-align:center;
+  color:#fff;
+  z-index:2;
+}
+.hero-title {
+  font-family:'Playfair Display', serif;
+  font-size:3rem;
+  margin-bottom:15px;
+}
+.hero-subtitle {
+  font-size:1.2rem;
+  margin-bottom:25px;
+}
+.hero-btn {
+  font-size:1.2rem;
 }
 
-.hero-content h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-}
-
-.hero-content p {
-  font-size: 1.25rem;
-  margin-bottom: 30px;
-}
-
+/* Buttons */
 .btn {
-  padding: 14px 30px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  border-radius: 10px;
-  cursor: pointer;
-  border: none;
-  transition: all 0.3s ease;
+  padding:12px 25px;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.3s;
 }
-
 .btn-primary {
-  background-color: #FFD700;
-  color: #000;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background:#FFD700;
+  color:#000;
 }
-
 .btn-primary:hover {
-  background-color: #e6c200;
-  color: #fff;
+  background:#FFC107;
+  color:#000;
+}
+.btn-secondary {
+  background:#ccc;
+  color:#333;
+}
+.btn-secondary:hover {
+  background:#aaa;
+  color:#fff;
 }
 
-/* =========================
-   Sections Titles
-========================= */
+/* Section */
+.section {
+  padding:60px 0;
+}
 .section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.4rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #333;
-  letter-spacing: 1px;
+  font-size:2.2rem;
+  text-align:center;
+  margin-bottom:25px;
+  font-family:'Montserrat', sans-serif;
+}
+.section-desc {
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 40px;
+  font-size:1.1rem;
+  color:#444;
 }
 
-/* =========================
-   Filter Section
-========================= */
-.filter-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 20px;
+/* About Grid */
+.about-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.about-card {
+  background:#fff;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 6px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+.about-card:hover {
+  transform:translateY(-5px);
+}
+.about-card i {
+  font-size:2rem;
+  color:#FFD700;
+  margin-bottom:15px;
 }
 
-.filter-group {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 200px;
-  min-width: 220px;
+/* Testimoni Grid */
+.testimoni-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+.testimoni-card {
+  background:#fff;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+.testimoni-card:hover {
+  transform:translateY(-5px);
 }
 
-.filter-group label {
-  font-weight: 600;
-  margin-bottom: 6px;
+/* CTA */
+.cta-section {
+  background: linear-gradient(90deg, #FFD700, #FFC107);
+  color:#000;
+  text-align:center;
+  padding:80px 0;
+}
+.cta-btn {
+  font-size:1.3rem;
 }
 
-.filter-group input,
-.filter-group select {
-  padding: 12px 15px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  transition: border 0.3s ease;
-}
-
-.filter-group input:focus,
-.filter-group select:focus {
-  border-color: #FFD700;
-  outline: none;
-}
-
-/* =========================
-   Motor Grid
-========================= */
+/* Motor Grid */
 .motor-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
 }
-
 .motor-card {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  text-align: center;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  background:#fff;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.1);
+  text-align:center;
+  transition:0.3s;
 }
-
 .motor-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  transform:translateY(-5px) scale(1.02);
 }
 
-.motor-card img {
-  width: 100%;
-  max-height: 180px;
-  object-fit: cover;
-}
-
-.motor-info h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  margin: 15px 0 8px;
-  font-size: 1.2rem;
-}
-
-.motor-info p {
-  font-size: 0.95rem;
-  margin-bottom: 8px;
-}
-
-/* =========================
-   Footer
-========================= */
+/* Footer */
 .footer {
-  background: linear-gradient(90deg, #FFD700, #e6c200);
-  padding: 30px 0;
-  text-align: center;
-  box-shadow: 0 -4px 15px rgba(0,0,0,0.15);
+  background:#FFD700;
+  padding:25px 0;
+  text-align:center;
+}
+.footer a {
+  color:#000;
+  margin:0 10px;
+  font-size:1.2rem;
+}
+.footer a:hover {
+  color:#333;
 }
 
-.footer p {
-  font-weight: 500;
-  margin-bottom: 15px;
+/* Map */
+.map-container {
+  margin-top:20px;
+  border-radius:15px;
+  overflow:hidden;
 }
 
-.footer .social-links a {
-  margin: 0 10px;
-  font-size: 1.4rem;
-  color: #000;
-  transition: 0.3s;
-}
-
-.footer .social-links a:hover {
-  color: #fff;
-}
-
-/* =========================
-   Responsive
-========================= */
-@media (max-width: 768px) {
-  .filter-grid {
-    flex-direction: column;
-  }
-
-  .hero-content h2 {
-    font-size: 2.2rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-}
+/* Responsive */
+@media(max-width:768px){
+  .header-flex {flex-direction:column;}
+  .header nav a {margin:10px 0;}
+  .hero-title {font-size:2rem;}
+  .hero-subtitle
