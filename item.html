@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MH53CKX7');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Item - Showroom Motor</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH53CKX7"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <div class="container">
+      <h1>Showroom Motor</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="item.html" class="active">Item</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="filter" class="container">
+    <h2>Filter Motor</h2>
+
+    <div class="filter-group">
+      <label for="jenis">Jenis Motor:</label>
+      <select id="jenis">
+        <option value="semua">Semua</option>
+        <option value="sport">Sport</option>
+        <option value="matic">Matic</option>
+        <option value="cruiser">Cruiser</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="harga">Harga Maksimum (Rp):</label>
+      <input type="number" id="harga" placeholder="Masukkan harga maksimum" />
+    </div>
+
+    <div class="filter-group">
+      <label for="search">Cari Motor:</label>
+      <input type="text" id="search" placeholder="Ketik nama motor..." />
+    </div>
+
+    <div class="buttons">
+      <button onclick="filterMotor()" class="btn btn-primary">Terapkan Filter</button>
+      <button onclick="resetFilter()" class="btn btn-secondary btn-riset">Reset Filter</button>
+    </div>
+  </section>
+
+  <section id="motor-list" class="container">
+    <h2>Motor Tersedia</h2>
+    <div class="motor-grid">
+      <div class="motor-card" data-jenis="sport" data-harga="50000000" data-nama="Yamaha R15">
+        <img src="r15.png" alt="Yamaha R15" />
+        <div class="motor-info">
+          <h3>Yamaha R15</h3>
+          <p>Jenis: Sport</p>
+          <p>Harga: Rp 50.000.000</p>
+        </div>
+      </div>
+
+      <div class="motor-card" data-jenis="matic" data-harga="20000000" data-nama="Honda Scoopy">
+        <img src="motor2.jpg" alt="Honda Scoopy" />
+        <div class="motor-info">
+          <h3>Honda Scoopy</h3>
+          <p>Jenis: Matic</p>
+          <p>Harga: Rp 20.000.000</p>
+        </div>
+      </div>
+
+      <div class="motor-card" data-jenis="cruiser" data-harga="75000000" data-nama="Harley Davidson">
+        <img src="motor3.jpg" alt="Harley Davidson" />
+        <div class="motor-info">
+          <h3>Harley Davidson</h3>
+          <p>Jenis: Cruiser</p>
+          <p>Harga: Rp 75.000.000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Showroom Motor. Semua Hak Cipta Dilindungi.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
