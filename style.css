@@ -184,3 +184,32 @@ footer a:hover {
     transform: scale(1.1);
     transition: 0.3s;
 }
+
+
+#cta {
+  text-align: center;          /* Center teks */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* Center secara vertikal */
+  align-items: center;         /* Center secara horizontal */
+  padding: 60px 20px;
+  background-color: #fff2cc;   /* Warna kuning lembut, bisa disesuaikan */
+}
+
+#cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+#cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+#cta .btn-primary {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+}
+
+
