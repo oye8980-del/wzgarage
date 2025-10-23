@@ -14,7 +14,6 @@
   <title>Item - WZ Garage</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a2d9d5a54b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -24,8 +23,8 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <header>
-    <div class="container header-flex">
-      <h1>🏍️ WZ Garage</h1>
+    <div class="container">
+      <h1>WZ Garage</h1>
       <nav>
         <a href="index.html">Home</a>
         <a href="tentang.html">Tentang</a>
@@ -34,39 +33,27 @@
     </div>
   </header>
 
-  <!-- Hero Banner -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Temukan Motor Impianmu di <span>WZ Garage</span></h2>
-      <p>Showroom digital dengan ratusan pilihan motor baru & bekas berkualitas tinggi.</p>
-      <a href="#motor-list" class="btn btn-primary">Lihat Koleksi</a>
-    </div>
-  </section>
-
-  <!-- Filter Section -->
   <section id="filter" class="container">
     <h2>Filter Motor</h2>
 
-    <div class="filter-grid">
-      <div class="filter-group">
-        <label for="jenis">Jenis Motor:</label>
-        <select id="jenis">
-          <option value="semua">Semua</option>
-          <option value="sport">Sport</option>
-          <option value="matic">Matic</option>
-          <option value="cruiser">Cruiser</option>
-        </select>
-      </div>
+    <div class="filter-group">
+      <label for="jenis">Jenis Motor:</label>
+      <select id="jenis">
+        <option value="semua">Semua</option>
+        <option value="sport">Sport</option>
+        <option value="matic">Matic</option>
+        <option value="cruiser">Cruiser</option>
+      </select>
+    </div>
 
-      <div class="filter-group">
-        <label for="harga">Harga Maksimum (Rp):</label>
-        <input type="number" id="harga" placeholder="Masukkan harga maksimum" />
-      </div>
+    <div class="filter-group">
+      <label for="harga">Harga Maksimum (Rp):</label>
+      <input type="number" id="harga" placeholder="Masukkan harga maksimum" />
+    </div>
 
-      <div class="filter-group">
-        <label for="search">Cari Motor:</label>
-        <input type="text" id="search" placeholder="Ketik nama motor..." />
-      </div>
+    <div class="filter-group">
+      <label for="search">Cari Motor:</label>
+      <input type="text" id="search" placeholder="Ketik nama motor..." />
     </div>
 
     <div class="buttons">
@@ -75,7 +62,6 @@
     </div>
   </section>
 
-  <!-- Motor List -->
   <section id="motor-list" class="container">
     <h2>Motor Tersedia</h2>
     <div class="motor-grid">
@@ -85,10 +71,6 @@
           <h3>Yamaha R15</h3>
           <p>Jenis: Sport</p>
           <p>Harga: Rp 50.000.000</p>
-          <div class="card-buttons">
-            <button class="btn-detail" onclick="showDetail('Yamaha R15', 'Sport', '50.000.000')">Detail</button>
-            <button class="btn-beli">Beli Sekarang</button>
-          </div>
         </div>
       </div>
 
@@ -98,10 +80,6 @@
           <h3>Honda Scoopy</h3>
           <p>Jenis: Matic</p>
           <p>Harga: Rp 20.000.000</p>
-          <div class="card-buttons">
-            <button class="btn-detail" onclick="showDetail('Honda Scoopy', 'Matic', '20.000.000')">Detail</button>
-            <button class="btn-beli">Beli Sekarang</button>
-          </div>
         </div>
       </div>
 
@@ -111,34 +89,17 @@
           <h3>Harley Davidson</h3>
           <p>Jenis: Cruiser</p>
           <p>Harga: Rp 75.000.000</p>
-          <div class="card-buttons">
-            <button class="btn-detail" onclick="showDetail('Harley Davidson', 'Cruiser', '75.000.000')">Detail</button>
-            <button class="btn-beli">Beli Sekarang</button>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Modal Detail -->
-  <div id="detailModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h3 id="modalTitle"></h3>
-      <p id="modalType"></p>
-      <p id="modalPrice"></p>
-    </div>
-  </div>
-
-  <!-- Footer -->
   <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 <strong>WZ Garage</strong> — Semua Hak Cipta Dilindungi.</p>
-      <div class="social-links">
-        <a href="https://www.instagram.com/wzgarageee" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@wzgarageee" target="_blank"><i class="fab fa-tiktok"></i></a>
-      </div>
-    </div>
+    <p>&copy; 2025 WZ Garage. Semua Hak Cipta Dilindungi.</p>
+    <p>Ikuti kami di 
+      <a href="https://www.instagram.com/wzgarageee" target="_blank">Instagram</a> |
+      <a href="https://www.tiktok.com/@wzgarageee" target="_blank">TikTok</a>
+    </p>
   </footer>
 
   <script src="script.js"></script>
