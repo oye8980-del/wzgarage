@@ -1,153 +1,98 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MH53CKX7');</script>
-  <!-- End Google Tag Manager -->
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WZ Garage - Jual Beli Motor Modern</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Item - WZ Garage</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a2d9d5a54b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH53CKX7"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
+  <!-- Header -->
   <header class="header">
     <div class="container header-flex">
       <h1 class="logo">WZ <span>Garage</span></h1>
       <nav>
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
         <a href="tentang.html">Tentang</a>
-        <a href="item.html">Item</a>
+        <a href="item.html" class="active">Item</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-content container">
-      <img src="logo-wzgarage.png" alt="Logo WZ Garage" class="hero-logo">
-      <h2>Motor Impianmu, Kini Lebih Dekat dengan WZ Garage</h2>
-      <p>Kami hadir dengan layanan jual beli motor berkualitas tinggi, transparan, dan terpercaya sejak 2010.</p>
-      <a href="item.html" class="btn btn-primary">Lihat Koleksi Motor</a>
-    </div>
-  </section>
+  <!-- Filter Section -->
+  <section id="filter" class="container">
+    <h2>Filter Motor</h2>
+    <div class="filter-grid">
+      <div class="filter-group">
+        <label for="jenis">Jenis Motor:</label>
+        <select id="jenis">
+          <option value="semua">Semua</option>
+          <option value="sport">Sport</option>
+          <option value="matic">Matic</option>
+          <option value="cruiser">Cruiser</option>
+        </select>
+      </div>
 
-  <!-- Tentang Singkat -->
-  <section id="about" class="container">
-    <h2>Tentang WZ Garage</h2>
-    <p>
-      WZ Garage adalah showroom digital yang berfokus pada jual beli motor baru dan bekas dengan kualitas terbaik.  
-      Kami percaya bahwa setiap kendaraan memiliki cerita — dan tugas kami adalah memastikan cerita itu dimulai dengan kepercayaan dan kepuasan pelanggan.
-    </p>
-    <div class="about-grid">
-      <div class="about-card">
-        <i class="fas fa-check-circle"></i>
-        <h3>Unit Terjamin</h3>
-        <p>Semua motor kami sudah melalui tahap pengecekan ketat sebelum dijual.</p>
+      <div class="filter-group">
+        <label for="harga">Harga Maksimum (Rp):</label>
+        <input type="number" id="harga" placeholder="Masukkan harga maksimum" />
       </div>
-      <div class="about-card">
-        <i class="fas fa-bolt"></i>
-        <h3>Proses Cepat</h3>
-        <p>Transaksi bisa selesai dalam hitungan jam dengan sistem online kami.</p>
+
+      <div class="filter-group">
+        <label for="search">Cari Motor:</label>
+        <input type="text" id="search" placeholder="Ketik nama motor..." />
       </div>
-      <div class="about-card">
-        <i class="fas fa-handshake"></i>
-        <h3>Pelayanan Bersahabat</h3>
-        <p>Tim kami siap membantu kamu dari konsultasi hingga pengantaran motor ke rumah.</p>
+
+      <div class="buttons">
+        <button onclick="filterMotor()" class="btn btn-primary">Terapkan Filter</button>
+        <button onclick="resetFilter()" class="btn btn-secondary">Reset Filter</button>
       </div>
     </div>
   </section>
 
-  <!-- Testimoni -->
-  <section id="testimoni">
-    <div class="container">
-      <h2>Kata Mereka Tentang WZ Garage</h2>
-      <div class="testimoni-grid">
-        <div class="testimoni-card">
-          <p>“Beli motor di WZ Garage bener-bener puas! Kondisi motor sesuai deskripsi, dan adminnya super ramah.”</p>
-          <h4>— Dimas, Bekasi</h4>
+  <!-- Motor List Section -->
+  <section id="motor-list" class="container">
+    <h2>Motor Tersedia</h2>
+    <div class="motor-grid">
+      <div class="motor-card" data-jenis="sport" data-harga="50000000" data-nama="Yamaha R15">
+        <img src="r15.png" alt="Yamaha R15" />
+        <div class="motor-info">
+          <h3>Yamaha R15</h3>
+          <p>Jenis: Sport</p>
+          <p>Harga: Rp 50.000.000</p>
         </div>
-        <div class="testimoni-card">
-          <p>“Saya jual motor di sini, prosesnya cepat dan harganya masuk akal. Transparan banget!”</p>
-          <h4>— Rani, Bandung</h4>
+      </div>
+
+      <div class="motor-card" data-jenis="matic" data-harga="20000000" data-nama="Honda Scoopy">
+        <img src="motor2.jpg" alt="Honda Scoopy" />
+        <div class="motor-info">
+          <h3>Honda Scoopy</h3>
+          <p>Jenis: Matic</p>
+          <p>Harga: Rp 20.000.000</p>
         </div>
-        <div class="testimoni-card">
-          <p>“Motor datang ke rumah tepat waktu, kondisi mulus, udah kayak beli baru!”</p>
-          <h4>— Andre, Tangerang</h4>
+      </div>
+
+      <div class="motor-card" data-jenis="cruiser" data-harga="75000000" data-nama="Harley Davidson">
+        <img src="motor3.jpg" alt="Harley Davidson" />
+        <div class="motor-info">
+          <h3>Harley Davidson</h3>
+          <p>Jenis: Cruiser</p>
+          <p>Harga: Rp 75.000.000</p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- CTA -->
-  <section id="cta" class="container">
-    <h2>Siap Dapetin Motor Impianmu?</h2>
-    <p>Klik tombol di bawah dan mulai perjalananmu bersama <strong>WZ Garage</strong> hari ini.</p>
-    <button id="lihatItemBtn" class="btn btn-primary">Lihat Motor Sekarang</button>
-  </section>
-
-  <!-- Kontak -->
-<section id="lokasi" class="container">
-  <h2>Alamat & Lokasi Kami</h2>
-  <p>📍 Perum Puri 3 blok Bp 06, Karadenan, Cibinong</p>
-  <div class="map-container">
-   <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3964.0509427527563!2d106.80798357499286!3d-6.515236593477198!
-     2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMzAnNTQuOSJTIDEwNsKwNDgnMzguMCJF!5e0!3m2!1sid!2sid!4v1761202304713!5m2!1sid!2sid" width="600" 
-     height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-     </iframe>
-  </div>
-</section>
-
 
   <!-- Footer -->
   <footer>
-    <div class="footer-content">
+    <div class="container footer-flex">
       <p>&copy; 2025 WZ Garage. Semua Hak Cipta Dilindungi.</p>
       <div class="social-links">
-        <a href="https://www.instagram.com/wzgarageee" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@wzgarageee" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://wa.me/6281234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/wzgarageee" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@wzgarageee" target="_blank">TikTok</a>
       </div>
     </div>
   </footer>
-
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/6281234567890" target="_blank" class="whatsapp-float">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <!-- Event ke Google Tag Manager -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const lihatBtn = document.getElementById('lihatItemBtn');
-      if (lihatBtn) {
-        lihatBtn.addEventListener('click', function() {
-          dataLayer.push({
-            event: 'cta_click',
-            button_name: 'Lihat Motor Sekarang',
-            page_section: 'CTA Home'
-          });
-          window.location.href = 'item.html';
-        });
-      }
-    });
-  </script>
 </body>
 </html>
-
-
-
-
-
-
