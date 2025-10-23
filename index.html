@@ -13,7 +13,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WZ Garage - Jual Beli Motor Modern</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2d9d5a54b.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -21,9 +22,9 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <header>
-    <div class="container">
-      <h1>WZ Garage</h1>
+  <header class="header">
+    <div class="container header-flex">
+      <h1 class="logo">WZ <span>Garage</span></h1>
       <nav>
         <a href="index.html" class="active">Home</a>
         <a href="tentang.html">Tentang</a>
@@ -32,58 +33,105 @@
     </div>
   </header>
 
-  <section id="hero" class="container">
-    <div class="brand-intro">
-      <img src="logo-wzgarage.png" alt="Logo WZ Garage" class="brand-logo">
-      <h2>WZ Garage — Jual Beli Motor Berkualitas</h2>
-      <p>
-        Kami adalah perusahaan jual beli motor terpercaya yang mengutamakan **transparansi, kualitas, dan kepuasan pelanggan**.
-        Dari motor sport hingga matic, semua kami seleksi dengan ketat agar kamu mendapatkan motor impian tanpa rasa khawatir.
-      </p>
-      <p>
-        WZ Garage hadir bukan sekadar tempat transaksi, tapi sebagai **partner perjalananmu** — memastikan setiap roda yang kamu beli
-        punya cerita dan performa yang tak diragukan.
-      </p>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content container">
+      <img src="logo-wzgarage.png" alt="Logo WZ Garage" class="hero-logo">
+      <h2>Motor Impianmu, Kini Lebih Dekat dengan WZ Garage</h2>
+      <p>Kami hadir dengan layanan jual beli motor berkualitas tinggi, transparan, dan terpercaya sejak 2010.</p>
       <a href="item.html" class="btn btn-primary">Lihat Koleksi Motor</a>
     </div>
   </section>
 
-  <section id="why-us" class="container">
-    <h2>Mengapa Memilih WZ Garage?</h2>
-    <div class="keunggulan-grid">
-      <div class="card">
-        <h3>✅ Unit Terjamin</h3>
-        <p>Setiap motor telah melewati proses pengecekan menyeluruh agar kamu mendapat kendaraan yang 100% layak jalan.</p>
+  <!-- Tentang Singkat -->
+  <section id="about" class="container">
+    <h2>Tentang WZ Garage</h2>
+    <p>
+      WZ Garage adalah showroom digital yang berfokus pada jual beli motor baru dan bekas dengan kualitas terbaik.  
+      Kami percaya bahwa setiap kendaraan memiliki cerita — dan tugas kami adalah memastikan cerita itu dimulai dengan kepercayaan dan kepuasan pelanggan.
+    </p>
+    <div class="about-grid">
+      <div class="about-card">
+        <i class="fas fa-check-circle"></i>
+        <h3>Unit Terjamin</h3>
+        <p>Semua motor kami sudah melalui tahap pengecekan ketat sebelum dijual.</p>
       </div>
-      <div class="card">
-        <h3>⚙️ Proses Cepat & Transparan</h3>
-        <p>Kami pastikan semua proses jual beli berlangsung mudah, cepat, dan tanpa biaya tersembunyi.</p>
+      <div class="about-card">
+        <i class="fas fa-bolt"></i>
+        <h3>Proses Cepat</h3>
+        <p>Transaksi bisa selesai dalam hitungan jam dengan sistem online kami.</p>
       </div>
-      <div class="card">
-        <h3>🏍️ Pilihan Lengkap</h3>
-        <p>Dari motor harian hingga kolektor, kami menyediakan berbagai model sesuai kebutuhan dan gaya hidupmu.</p>
-      </div>
-      <div class="card">
-        <h3>🤝 Layanan Bersahabat</h3>
-        <p>Tim kami selalu siap membantu mulai dari konsultasi, pengecekan unit, hingga pengantaran motor ke lokasi kamu.</p>
+      <div class="about-card">
+        <i class="fas fa-handshake"></i>
+        <h3>Pelayanan Bersahabat</h3>
+        <p>Tim kami siap membantu kamu dari konsultasi hingga pengantaran motor ke rumah.</p>
       </div>
     </div>
   </section>
 
+  <!-- Testimoni -->
+  <section id="testimoni">
+    <div class="container">
+      <h2>Kata Mereka Tentang WZ Garage</h2>
+      <div class="testimoni-grid">
+        <div class="testimoni-card">
+          <p>“Beli motor di WZ Garage bener-bener puas! Kondisi motor sesuai deskripsi, dan adminnya super ramah.”</p>
+          <h4>— Dimas, Bekasi</h4>
+        </div>
+        <div class="testimoni-card">
+          <p>“Saya jual motor di sini, prosesnya cepat dan harganya masuk akal. Transparan banget!”</p>
+          <h4>— Rani, Bandung</h4>
+        </div>
+        <div class="testimoni-card">
+          <p>“Motor datang ke rumah tepat waktu, kondisi mulus, udah kayak beli baru!”</p>
+          <h4>— Andre, Tangerang</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
   <section id="cta" class="container">
-    <h2>Beli atau Jual Motor dengan Mudah Bersama Kami</h2>
-    <p>
-      Yuk mulai perjalananmu bersama <strong>WZ Garage</strong>.  
-      Klik tombol di bawah untuk melihat semua unit motor yang tersedia!
-    </p>
+    <h2>Siap Dapetin Motor Impianmu?</h2>
+    <p>Klik tombol di bawah dan mulai perjalananmu bersama <strong>WZ Garage</strong> hari ini.</p>
     <button id="lihatItemBtn" class="btn btn-primary">Lihat Motor Sekarang</button>
   </section>
 
+  <!-- Kontak -->
+  <section id="kontak" class="container">
+    <h2>Hubungi Kami</h2>
+    <p>Butuh bantuan atau ingin tanya-tanya? Tim kami siap 24 jam.</p>
+    <div class="contact-grid">
+      <div>
+        <p><strong>📍 Alamat:</strong> Jl. Raya Motor No.123, Jakarta</p>
+        <p><strong>☎️ Telepon:</strong> 0812-3456-7890</p>
+        <p><strong>📧 Email:</strong> showroommotor@email.com</p>
+      </div>
+      <iframe 
+        src="https://www.google.com/maps?q=Jakarta&output=embed"
+        width="100%" height="250" style="border:0;" allowfullscreen="">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 WZ Garage. Semua Hak Cipta Dilindungi.</p>
+    <div class="footer-content">
+      <p>&copy; 2025 WZ Garage. Semua Hak Cipta Dilindungi.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/wzgarageee" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@wzgarageee" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/6281234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
   </footer>
 
-  <!-- Kirim event ke Google Tag Manager saat tombol CTA diklik -->
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/6281234567890" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Event ke Google Tag Manager -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const lihatBtn = document.getElementById('lihatItemBtn');
@@ -94,7 +142,7 @@
             button_name: 'Lihat Motor Sekarang',
             page_section: 'CTA Home'
           });
-          window.location.href = 'item.html'; // lanjut ke halaman item
+          window.location.href = 'item.html';
         });
       }
     });
