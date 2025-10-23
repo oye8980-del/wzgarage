@@ -1,4 +1,4 @@
-/* Font dan Reset */
+/* Reset & Font */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -16,7 +16,7 @@ body {
 
 /* Header */
 .header {
-  background-color: #FFD700; /* Kuning klasik */
+  background-color: #FFD700;
   padding: 15px 0;
 }
 
@@ -38,51 +38,33 @@ body {
   border-bottom: 2px solid #333;
 }
 
-/* Sections */
-.section {
-  padding: 50px 0;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 30px;
+/* Hero */
+#hero {
   text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #FFE066, #FFD700);
 }
 
-/* Filter */
-.filter-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
+#hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-.filter-group {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 200px;
-  min-width: 200px;
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
 }
 
-.filter-group input, .filter-group select {
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-.buttons {
-  margin-top: 20px;
-  text-align: center;
-}
-
+/* Buttons */
 .btn {
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
-  cursor: pointer;
   font-weight: 600;
+  cursor: pointer;
   transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn-primary {
@@ -103,10 +85,62 @@ body {
   background-color: #aaa;
 }
 
+/* Sections */
+.section {
+  padding: 50px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* About Grid */
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.about-card {
+  flex: 1 1 250px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-card i {
+  font-size: 2rem;
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+
+/* Testimoni */
+.testimoni-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.testimoni-card {
+  flex: 1 1 250px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  font-style: italic;
+}
+
 /* Motor Grid */
 .motor-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 30px;
 }
 
@@ -114,17 +148,22 @@ body {
   background-color: #fff;
   padding: 15px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .motor-card img {
-  max-width: 100%;
+  width: 100%;
   border-radius: 12px;
 }
 
-.motor-info h3 {
-  margin: 10px 0 5px;
+/* CTA */
+.cta-section {
+  background: linear-gradient(135deg, #FFE066, #FFD700);
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 12px;
+  margin: 50px auto;
 }
 
 /* Footer */
@@ -134,20 +173,51 @@ body {
   text-align: center;
 }
 
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .social-links a {
   margin: 0 10px;
-  color: #000;
   font-size: 1.2rem;
+  color: #000;
 }
 
-.social-links a:hover {
-  color: #333;
+/* WhatsApp Float */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Responsif */
-@media (max-width: 768px) {
-  .filter-grid {
+.whatsapp-float:hover {
+  background-color: #1ebe5d;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+  .header-flex {
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
+  }
+  .about-grid, .testimoni-grid {
+    flex-direction: column;
+  }
+  .footer-flex {
+    flex-direction: column;
+    gap: 10px;
   }
 }
