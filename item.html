@@ -1,22 +1,14 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Item - WZ Garage</title>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-  
-  <!-- FontAwesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/a2d9d5a54b.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-  <!-- Header -->
   <header class="header">
     <div class="container header-flex">
       <h1 class="logo">WZ <span>Garage</span></h1>
@@ -28,7 +20,6 @@
     </div>
   </header>
 
-  <!-- Filter Section -->
   <section id="filter" class="container section">
     <h2 class="section-title">Filter Motor</h2>
     <div class="filter-grid">
@@ -41,69 +32,39 @@
           <option value="cruiser">Cruiser</option>
         </select>
       </div>
-
       <div class="filter-group">
         <label for="harga">Harga Maksimum (Rp):</label>
-        <input type="number" id="harga" placeholder="Masukkan harga maksimum" />
+        <input type="number" id="harga" placeholder="Masukkan harga maksimum">
       </div>
-
       <div class="filter-group">
         <label for="search">Cari Motor:</label>
-        <input type="text" id="search" placeholder="Ketik nama motor..." />
+        <input type="text" id="search" placeholder="Ketik nama motor...">
       </div>
     </div>
-
     <div class="buttons">
       <button onclick="filterMotor()" class="btn btn-primary">Terapkan Filter</button>
       <button onclick="resetFilter()" class="btn btn-secondary">Reset Filter</button>
     </div>
   </section>
 
-  <!-- Motor List Section -->
   <section id="motor-list" class="container section">
     <h2 class="section-title">Motor Tersedia</h2>
     <div class="motor-grid">
+      <!-- Contoh motor -->
       <div class="motor-card" data-jenis="sport" data-harga="50000000" data-nama="Yamaha R15">
-        <img src="r15.png" alt="Yamaha R15" />
+        <img src="r15.png" alt="Yamaha R15">
         <div class="motor-info">
           <h3>Yamaha R15</h3>
           <p>Jenis: Sport</p>
           <p>Harga: Rp 50.000.000</p>
         </div>
       </div>
-
       <div class="motor-card" data-jenis="matic" data-harga="20000000" data-nama="Honda Scoopy">
-        <img src="motor2.jpg" alt="Honda Scoopy" />
+        <img src="motor2.jpg" alt="Honda Scoopy">
         <div class="motor-info">
           <h3>Honda Scoopy</h3>
           <p>Jenis: Matic</p>
           <p>Harga: Rp 20.000.000</p>
         </div>
       </div>
-
-      <div class="motor-card" data-jenis="cruiser" data-harga="75000000" data-nama="Harley Davidson">
-        <img src="motor3.jpg" alt="Harley Davidson" />
-        <div class="motor-info">
-          <h3>Harley Davidson</h3>
-          <p>Jenis: Cruiser</p>
-          <p>Harga: Rp 75.000.000</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-flex">
-      <p>&copy; 2025 WZ Garage. Semua Hak Cipta Dilindungi.</p>
-      <div class="social-links">
-        <a href="https://www.instagram.com/wzgarageee" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@wzgarageee" target="_blank"><i class="fab fa-tiktok"></i></a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JS -->
-  <script src="script.js"></script>
-</body>
-</html>
+     
