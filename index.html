@@ -8,6 +8,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MH53CKX7');</script>
 <!-- End Google Tag Manager -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S99P1EZPVT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S99P1EZPVT');
+</script>
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WZ Garage - Home</title>
@@ -76,7 +87,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="cta" class="container section">
   <h2>Siap Dapetin Motor Impianmu?</h2>
   <p>Klik tombol di bawah dan mulai perjalananmu bersama <strong>WZ Garage</strong> hari ini.</p>
-  <a href="item.html" class="btn btn-primary cta-btn">Lihat Motor Sekarang</a>
+  <a id="lhtmtr" href="item.html" class="btn btn-primary cta-btn">Lihat Motor Sekarang</a>
 </section>
 
 <!-- Footer -->
@@ -93,8 +104,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- JS -->
 <script src="script.js"></script>
+
+  <script>
+document.getElementById('lhtmtr').addEventListener('click', function() {
+ dataLayer.push({
+ 'event': 'lihatmotor',
+ 'panel_name': 'lihatmotorsekarang',
+ 'panel_page_title': ‘lihatmotor-index’
+ });
+});
+</script>
+
 </body>
 </html>
+
 
 
 
