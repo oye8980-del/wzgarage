@@ -105,18 +105,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- JS -->
 <script src="script.js"></script>
 
-  <script>
+<script>
 document.getElementById('lhtmtr').addEventListener('click', function() {
- dataLayer.push({
- 'event': 'lihatmotor',
- 'panel_name': 'lihatmotorsekarang',
- 'panel_page_title': ‘lihatmotor-index’
+ gtag( 'event', 'lihatmotortracking', {
+ 'panel_name': 'lihatmotorhome',
+ 'panel_lihatmotor': 'lhtmotor',
+ 'posisi': 'button'
  });
 });
 </script>
 
 </body>
 </html>
+
 
 
 
